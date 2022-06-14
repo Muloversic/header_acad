@@ -215,3 +215,7 @@ body.lock {
     max-width: 230px;
   }
 }
+
+.fa-mr {
+  margin-right: 20px;
+}
