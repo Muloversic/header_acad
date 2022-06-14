@@ -32,18 +32,24 @@ burgerIcon.addEventListener('click', () => {
 });
 
 const logoImg = document.querySelector('.header__logo');
-const fromSearch = document.querySelector('.menu__form--mobile');
-const menuIconSearch = document.querySelector('.menu__icon--mobile .menu__icon-search');
-menuIconSearch.addEventListener('click', () => {
-  console.log('click');
-  fromSearch.classList.toggle('menu__form--active');
+const fromSearchMobile = document.querySelector('.menu__form--mobile');
+const menuIconSearchMobile = document.querySelector('.menu__icon--mobile .menu__icon-search');
+menuIconSearchMobile.addEventListener('click', () => {
+  menuIconSearchMobile.classList.toggle('menu__form--active');
 });
 
 window.onresize = () => {
   if (window.innerWidth <= 500) {
-    fromSearch.style.width = window.innerWidth + 'px';
+    fromSearchMobile.style.width = window.innerWidth + 'px';
   }
 };
+
+const fromSearchDesktop = document.querySelector('.menu__form--desktop');
+const menuIconSearchDesktop = document.querySelector('.menu__icon--desktop.menu__icon--search');
+
+menuIconSearchDesktop.addEventListener('click', () => {
+  fromSearchDesktop.classList.toggle('menu__form--active');
+});
 
 const mobileLists = document.querySelectorAll('.menu__item--mobile');
 const mobileSearchField = document.querySelector('.menu__form--mobile .menu__search');
@@ -57,7 +63,7 @@ document.addEventListener('click', (e) => {
   }
 
   [...mobileLists][0].classList.add('active');
-  if (!menuIconSearch.contains(e.target) && !mobileSearchField.contains(e.target)) {
-    fromSearch.classList.remove('menu__form--active');
+  if (!menuIconSearchMobile.contains(e.target) && !mobileSearchField.contains(e.target)) {
+    fromSearchMobile.classList.remove('menu__form--active');
   }
 });
