@@ -4,6 +4,12 @@ if (menuArrows.length > 0) {
     item.addEventListener('click', () => {
       item.classList.toggle('active');
     });
+
+    document.addEventListener('click', (e) => {
+      if (!item.contains(e.target)) {
+        item.classList.remove('active');
+      }
+    });
   });
 }
 
@@ -44,3 +50,18 @@ window.onresize = () => {
     logoImg.setAttribute('src', 'https://acad.org/wp-content/uploads/2017/08/ACAD_logo_200px.png');
   }
 };
+
+document.addEventListener('click', (e) => {
+  console.log(burgerIcon.contains(e.target));
+  if (!burgerIcon.contains(e.target)) {
+    document.body.classList.remove('lock');
+    burgerIcon.classList.remove('active');
+    burgerMenuBody.classList.remove('active');
+    burgerIcon.children[0].classList.remove('fa-xmark');
+    headerContainer.style.left = 0 + 'px';
+  }
+
+  if (!menuIconSearch.contains(e.target)) {
+    fromSearch.classList.remove('menu__form--active');
+  }
+});
