@@ -35,7 +35,7 @@ const logoImg = document.querySelector('.header__logo');
 const fromSearchMobile = document.querySelector('.menu__form--mobile');
 const menuIconSearchMobile = document.querySelector('.menu__icon--mobile .menu__icon-search');
 menuIconSearchMobile.addEventListener('click', () => {
-  menuIconSearchMobile.classList.toggle('menu__form--active');
+  fromSearchMobile.classList.toggle('menu__form--active');
 });
 
 window.onresize = () => {
