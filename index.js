@@ -45,9 +45,9 @@ window.onresize = () => {
   }
 };
 
+const mobileLists = document.querySelectorAll('.menu__item--mobile');
 document.addEventListener('click', (e) => {
-  console.log(burgerIcon.contains(e.target));
-  if (!burgerIcon.contains(e.target)) {
+  if (!burgerIcon.contains(e.target) && !burgerMenuBody.contains(e.target)) {
     document.body.classList.remove('lock');
     burgerIcon.classList.remove('active');
     burgerMenuBody.classList.remove('active');
@@ -55,6 +55,7 @@ document.addEventListener('click', (e) => {
     headerContainer.style.left = 0 + 'px';
   }
 
+  [...mobileLists][0].classList.add('active');
   if (!menuIconSearch.contains(e.target)) {
     fromSearch.classList.remove('menu__form--active');
   }
