@@ -15,9 +15,8 @@ body.lock {
   left: 0;
   width: 100%;
   z-index: 5;
-  background: #446880;
   color: #fff;
-  font-family: 'Merriweather Sans', sans;
+  font-family: 'Merriweather Sans';
 }
 
 .header__container {
@@ -27,8 +26,17 @@ body.lock {
   margin: 0 auto;
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
-  min-height: 48px;
+  justify-content: end;
+}
+
+.header__container--desktop {
+  min-height: 28.8px;
+  padding-right: 15px;
+  background: #446880;
+}
+.header__container--secondary {
+  justify-content: center;
+  padding: 25px 35px 4px 35px;
 }
 
 .header__logo {
@@ -50,12 +58,14 @@ body.lock {
 }
 
 .menu__list {
+  display: flex;
 }
-.menu__list > li {
+
+.menu__list > .menu__item {
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .menu__link {
@@ -68,6 +78,7 @@ body.lock {
 }
 
 .menu__sub-list {
+  display: none;
   position: absolute;
   top: 100%;
   right: 0;
@@ -94,7 +105,67 @@ body.lock {
   margin-left: 10px;
 }
 
+.menu__form {
+  display: none;
+}
+
+.menu__list > .menu__item--mobile {
+  display: none;
+}
+
+.menu__item .menu__icon--desktop {
+  display: block;
+}
+
+.header__logo--mobile {
+  display: none;
+}
+
+.menu__item--desktop.menu__item--primary .menu__link {
+  font-size: 13px;
+  padding: 5px 10px 0;
+}
+
+.menu__icon--desktop .menu__icon-search {
+  font-size: 13px;
+  padding: 5px 10px 0;
+}
+
+.menu__list-primary {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 @media screen and (max-width: 782px) {
+  .header {
+    background: #446880;
+  }
+
+  .header__container {
+    justify-content: space-between;
+    min-height: 50px;
+  }
+
+  .header__container--secondary {
+    display: none;
+  }
+
+  .menu__list-primary {
+    display: none;
+  }
+
+  .menu__list > .menu__item--mobile {
+    display: flex;
+  }
+  .menu__list > .menu__item--desktop {
+    display: none;
+  }
+
+  .header__logo--mobile {
+    display: block;
+  }
+
   .menu__icon {
     z-index: 7;
     display: block;
@@ -143,6 +214,10 @@ body.lock {
     margin: 0 10px 0 0;
   }
 
+  .menu__list {
+    display: block;
+  }
+
   .menu__list > li {
     font-weight: bold;
     flex-wrap: wrap;
@@ -158,6 +233,7 @@ body.lock {
   }
 
   .menu__sub-list {
+    display: block;
     position: relative;
     flex: 1 1 100%;
     _display: none;

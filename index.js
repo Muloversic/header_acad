@@ -25,14 +25,22 @@ burgerIcon.addEventListener('click', () => {
   }
 });
 
-const fromSearch = document.querySelector('.menu__form');
-const menuIconSearch = document.querySelector('.menu__icon-search');
+const logoImg = document.querySelector('.header__logo');
+const fromSearch = document.querySelector('.menu__form--mobile');
+const menuIconSearch = document.querySelector('.menu__icon--mobile .menu__icon-search');
 menuIconSearch.addEventListener('click', () => {
+  console.log('click');
   fromSearch.classList.toggle('menu__form--active');
 });
 
 window.onresize = () => {
   if (window.innerWidth <= 500) {
     fromSearch.style.width = window.innerWidth + 'px';
+  }
+
+  if (window.innerWidth <= 959) {
+    logoImg.setAttribute('src', 'https://acad.org/wp-content/uploads/2017/09/ACAD_logo_Small_Reverse_25px.png');
+  } else {
+    logoImg.setAttribute('src', 'https://acad.org/wp-content/uploads/2017/08/ACAD_logo_200px.png');
   }
 };

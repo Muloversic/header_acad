@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/a1ec848f9d.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/a1ec848f9d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
     <title>ACAD Header</title>
@@ -15,24 +12,57 @@
 
   <body>
     <header class="header">
-      <div class="header__container">
+      <div class="header__container header__container--desktop menu">
         <div class="menu__icon">
           <i class="fa-solid fa-bars"></i>
         </div>
         <img
           src="https://acad.org/wp-content/uploads/2017/09/ACAD_logo_Small_Reverse_25px.png"
-          class="header__logo"
+          class="header__logo header__logo--mobile"
         />
         <nav class="menu__body">
           <ul class="menu__list">
-            <li class="active">
+            <div class="menu__list-primary">
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link">75th Anniversary Year</a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link">Contact</a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link">Renew</a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link">Join</a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link">Subscribe for Email Updates</a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link"><i class="fa-brands fa-facebook fa-lg"></i></a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link"><i class="fa-brands fa-twitter-square fa-lg"></i></a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <a href="#" class="menu__link"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+              </li>
+              <li class="menu__item menu__item--desktop menu__item--primary">
+                <div class="menu__icon menu__icon menu__icon--desktop menu__icon--search">
+                  <i class="fa-solid fa-magnifying-glass menu__icon-search fa-lg"></i>
+                </div>
+                <form class="menu__form menu__form--desktop">
+                  <input class="menu__search" type="text" placeholder="Search..." />
+                </form>
+              </li>
+            </div>
+            <!-- mobile -->
+            <li class="active menu__item menu__item--mobile">
               <a href="#" class="menu__link">Home</a>
             </li>
-            <li>
+            <li class="menu__item menu__item--mobile">
               <a href="#" class="menu__link">About</a>
-              <span class="menu__arrow"
-                ><i class="fa-solid fa-chevron-down"></i
-              ></span>
+              <span class="menu__arrow"> <i class="fa-solid fa-chevron-down"></i></span>
               <ul class="menu__sub-list">
                 <li>
                   <a href="#" class="menu__sub-link">75th Anniversary Year</a>
@@ -60,11 +90,9 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="menu__item menu__item--mobile">
               <a href="#" class="menu__link">Membership</a>
-              <span class="menu__arrow"
-                ><i class="fa-solid fa-chevron-down"></i
-              ></span>
+              <span class="menu__arrow"><i class="fa-solid fa-chevron-down"></i></span>
               <ul class="menu__sub-list">
                 <li>
                   <a href="#" class="menu__sub-link">Member benefits</a>
@@ -76,17 +104,13 @@
                   <a href="#" class="menu__sub-link">Get Involved</a>
                 </li>
                 <li>
-                  <a href="#" class="menu__sub-link"
-                    >Peer Conferencing Program</a
-                  >
+                  <a href="#" class="menu__sub-link">Peer Conferencing Program</a>
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="menu__item menu__item--mobile">
               <a href="#" class="menu__link">Meeting & Events</a>
-              <span class="menu__arrow"
-                ><i class="fa-solid fa-chevron-down"></i
-              ></span>
+              <span class="menu__arrow"><i class="fa-solid fa-chevron-down"></i></span>
               <ul class="menu__sub-list">
                 <li>
                   <a href="#" class="menu__sub-link">Annual Meeting</a>
@@ -99,11 +123,9 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="menu__item menu__item--mobile">
               <a href="#" class="menu__link">Resources</a>
-              <span class="menu__arrow"
-                ><i class="fa-solid fa-chevron-down"></i
-              ></span>
+              <span class="menu__arrow"><i class="fa-solid fa-chevron-down"></i></span>
               <ul class="menu__sub-list">
                 <li>
                   <a href="#" class="menu__sub-link">ACAD Reading List</a>
@@ -112,9 +134,7 @@
                   <a href="#" class="menu__sub-link">Explore Resources</a>
                 </li>
                 <li>
-                  <a href="#" class="menu__sub-link"
-                    >The Resource Handbook for Academic Deans</a
-                  >
+                  <a href="#" class="menu__sub-link">The Resource Handbook for Academic Deans</a>
                 </li>
                 <li>
                   <a href="#" class="menu__sub-link">The ACAD Leader</a>
@@ -124,26 +144,38 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#" class="menu__link">
-                <i class="fa-solid fa-square-arrow-up-right fa-mr"></i>Career
-                Center</a
-              >
+            <li class="menu__item menu__item--mobile">
+              <a href="#" class="menu__link"> <i class="fa-solid fa-square-arrow-up-right fa-mr"></i>Career Center</a>
             </li>
-            <li><a href="#" class="menu__link">Contact</a></li>
-            <li><a href="#" class="menu__link">Renew</a></li>
-            <li><a href="#" class="menu__link">Join ACAD</a></li>
-            <li>
+            <li class="menu__item menu__item--mobile">
+              <a href="#" class="menu__link">Contact</a>
+            </li>
+            <li class="menu__item menu__item--mobile">
+              <a href="#" class="menu__link">Renew</a>
+            </li>
+            <li class="menu__item menu__item--mobile">
+              <a href="#" class="menu__link">Join ACAD</a>
+            </li>
+            <li class="menu__item menu__item--mobile">
               <a href="#" class="menu__link">Subscribe for Email Updates</a>
             </li>
           </ul>
         </nav>
-        <div class="menu__icon menu__icon--search">
+        <div class="menu__icon menu__icon menu__icon--mobile menu__icon--search">
           <i class="fa-solid fa-magnifying-glass menu__icon-search"></i>
         </div>
-        <form class="menu__form">
+        <form class="menu__form menu__form--mobile">
           <input class="menu__search" type="text" placeholder="Search..." />
         </form>
+      </div>
+      <div class="header__container header__container--secondary">
+        <nav class="header__nav-secondary menu">
+          <ul class="menu__list">
+            <li class="menu__item--desktop menu__item--secondary">
+              <img src="https://acad.org/wp-content/uploads/2017/08/ACAD_logo_200px.png" class="header__logo" />
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <script src="index.js"></script>
