@@ -13,7 +13,7 @@ body.lock {
   width: 100%;
   z-index: 5;
   color: #fff;
-  font-family: 'Merriweather Sans';
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .header__container {
@@ -40,7 +40,7 @@ body.lock {
   position: relative;
   z-index: 5;
   object-fit: contain;
-  margin-right: 25px;
+  margin-right: 45px;
 }
 
 .menu__icon {
@@ -118,12 +118,12 @@ body.lock {
 }
 
 .menu__item--desktop.menu__item--primary .menu__link {
-  font-size: 13px;
+  font-size: 11px;
   padding: 5px 10px 0;
 }
 
 .menu__icon--desktop .menu__icon-search {
-  font-size: 13px;
+  font-size: 11px;
   padding: 5px 10px 0;
 }
 
@@ -139,7 +139,7 @@ body.lock {
 }
 
 .menu__item--secondary {
-  padding-right: 9px;
+  padding-right: 15px;
 }
 
 .menu__item--secondary:last-of-type {
@@ -177,6 +177,7 @@ body.lock {
 
 .menu__list .menu__item--secondary a {
   font-weight: 700;
+  font-size: 14px;
 }
 
 .menu__item--secondary.active .menu__sub-list li a {
