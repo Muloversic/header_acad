@@ -342,6 +342,10 @@ body.lock {
     font-size: 20px;
   }
 
+  /* .menu__search:active {
+    border: none;
+  } */
+
   .menu__search::placeholder {
     font-size: 20px;
   }

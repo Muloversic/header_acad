@@ -46,6 +46,7 @@ window.onresize = () => {
 };
 
 const mobileLists = document.querySelectorAll('.menu__item--mobile');
+const mobileSearchField = document.querySelector('.menu__form--mobile .menu__search');
 document.addEventListener('click', (e) => {
   if (!burgerIcon.contains(e.target) && !burgerMenuBody.contains(e.target)) {
     document.body.classList.remove('lock');
@@ -56,7 +57,7 @@ document.addEventListener('click', (e) => {
   }
 
   [...mobileLists][0].classList.add('active');
-  if (!menuIconSearch.contains(e.target)) {
+  if (!menuIconSearch.contains(e.target) && !mobileSearchField.contains(e.target)) {
     fromSearch.classList.remove('menu__form--active');
   }
 });
