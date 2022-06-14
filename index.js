@@ -53,6 +53,7 @@ menuIconSearchDesktop.addEventListener('click', () => {
 
 const mobileLists = document.querySelectorAll('.menu__item--mobile');
 const mobileSearchField = document.querySelector('.menu__form--mobile .menu__search');
+const desktopSearchField = document.querySelector('.menu__form--desktop .menu__search');
 document.addEventListener('click', (e) => {
   if (!burgerIcon.contains(e.target) && !burgerMenuBody.contains(e.target)) {
     document.body.classList.remove('lock');
@@ -65,5 +66,8 @@ document.addEventListener('click', (e) => {
   [...mobileLists][0].classList.add('active');
   if (!menuIconSearchMobile.contains(e.target) && !mobileSearchField.contains(e.target)) {
     fromSearchMobile.classList.remove('menu__form--active');
+  }
+  if (!menuIconSearchDesktop.contains(e.target) && !desktopSearchField.contains(e.target)) {
+    fromSearchDesktop.classList.remove('menu__form--active');
   }
 });
