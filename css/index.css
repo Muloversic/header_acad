@@ -173,13 +173,19 @@ body.lock {
     max-height: 0;
     padding: 10px 0 0;
     opacity: 0;
-    transition: opacity 0.3s, max-height 0.3s;
+    visibility: hidden;
+    transition: opacity 0.5s, max-height 0.5s;
   }
 
-  .menu__sub-list--active {
+  .menu__list li.active .menu__sub-list {
     opacity: 1;
     _display: block;
-    max-height: 200px;
+    visibility: visible;
+    max-height: 400px;
+  }
+
+  li.active .menu__arrow i {
+    transform: rotate(180deg);
   }
 
   .menu__sub-link {

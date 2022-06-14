@@ -3,9 +3,6 @@ if (menuArrows.length > 0) {
   [...menuArrows].forEach((item) => {
     item.addEventListener('click', () => {
       item.classList.toggle('active');
-      const subList = document.querySelector(`.menu__sub-list`);
-      subList.classList.toggle('menu__sub-list--active');
-      console.log(subList);
     });
   });
 }
