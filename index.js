@@ -14,7 +14,6 @@ burgerIcon.addEventListener('click', () => {
   document.body.classList.toggle('lock');
   burgerIcon.classList.toggle('active');
   burgerMenuBody.classList.toggle('active');
-  //   headerContainer.classList.toggle('shift');
   burgerIcon.children[0].classList.toggle('fa-xmark');
 
   const shiftWidth = burgerMenuBody.clientWidth;
@@ -25,3 +24,15 @@ burgerIcon.addEventListener('click', () => {
     headerContainer.style.left = 0 + 'px';
   }
 });
+
+const fromSearch = document.querySelector('.menu__form');
+const menuIconSearch = document.querySelector('.menu__icon-search');
+menuIconSearch.addEventListener('click', () => {
+  fromSearch.classList.toggle('menu__form--active');
+});
+
+window.onresize = () => {
+  if (window.innerWidth <= 500) {
+    fromSearch.style.width = window.innerWidth + 'px';
+  }
+};
